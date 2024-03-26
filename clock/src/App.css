@@ -1,0 +1,22 @@
+body {
+    background: url("../public/bg.svg");
+}
+.clock {
+    max-width: 20rem;
+    padding: 2em;
+    border-radius: 0.5em;
+    background-color: aliceblue;
+    margin: 2rem auto;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+span {
+    color: blue;
+}
