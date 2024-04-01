@@ -14,10 +14,9 @@ import Github from "../assets/images/github.png";
 import MySql from "../assets/images/mysql.png";
 import Jquery from "../assets/images/jQuery.png";
 
-const AboutMe = () => {
-    const [toggleStateMode, setToggleStateMode] = useState("");
+const AboutMe = ({ darkMode, toggleDarkMode }) => {
     const toggleMode = (menu) => {
-        setToggleStateMode(menu);
+        toggleDarkMode(menu);
     };
     const techs = [
         {
@@ -94,11 +93,13 @@ const AboutMe = () => {
         },
     ];
     return (
-        <main className={`${toggleStateMode} h-screen dark:bg-[#101010]`}>
-            <NavBar toggleStateMode={toggleStateMode} toggleMode={toggleMode} />
-            <section className="flex px-4 py-10 gap-16 justify-between max-w-screen-lg mx-auto ">
-                <div className="pr-5 max-w-[55%]">
-                    <h2 className=" text-4xl font-bold mb-6 w-5/6 decoration-sky-800 dark:text-white">
+        <main
+            className={`${darkMode && "dark"} min-h-screen dark:bg-[#101010]`}
+        >
+            <NavBar currentMode={darkMode} toggleMode={toggleMode} />
+            <article className="flex px-4 py-5 gap-16 justify-between max-w-screen-lg mx-auto ">
+                <section className="pr-5 max-w-[55%]">
+                    <h2 className=" text-4xl font-bold mb-6 w-5/6 dark:text-white">
                         A Little About Me
                     </h2>
                     <p className="leading-relaxed my-8 text-xl font-medium text-justify dark:text-white">
@@ -120,12 +121,12 @@ const AboutMe = () => {
                     <a className="px-6 py-3 font-medium bg-slate-800 rounded text-white hover:bg-[#08D9D6] shadow-md duration-500 cursor-pointer dark:bg-white dark:text-slate-800 dark:hover:text-white">
                         <Link to="/projects">View Projects</Link>
                     </a>
-                </div>
-                <div className="w-[45%]">
+                </section>
+                <section className="w-[45%]">
                     <h2 className=" text-4xl font-bold mb-9 decoration-sky-800 dark:text-white text-center">
                         Tech Stack
                     </h2>
-                    <section className="grid grid-cols-4 gap-y-5 px-2">
+                    <div className="grid grid-cols-4 gap-y-5 px-2">
                         {techs.map(({ id, src, shadow, alt }) => {
                             return (
                                 <img
@@ -136,9 +137,9 @@ const AboutMe = () => {
                                 />
                             );
                         })}
-                    </section>
-                </div>
-            </section>
+                    </div>
+                </section>
+            </article>
         </main>
     );
 };
