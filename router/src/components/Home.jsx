@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import Edward from "../assets/images/edward2.jpg";
