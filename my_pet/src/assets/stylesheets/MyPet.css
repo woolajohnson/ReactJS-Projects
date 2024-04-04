@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-color: #c7cccb;
+    img {
+        width: 44rem;
+        margin: 0 auto;
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: blue;
+    }
+    form {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        input {
+            padding: 0.7rem;
+            margin: 0.2rem;
+            outline: none;
+            border: none;
+            border-radius: 0.2em;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
