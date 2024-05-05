@@ -14,7 +14,7 @@ const Home = ({ darkMode, toggleDarkMode }) => {
             } min-h-screen -z-100 dark:bg-[#101010]`}
         >
             <article className="flex md:flex-row flex-col px-4 pt-2 md:pt-24 justify-center items-center max-w-screen-lg mx-auto md:gap-8 leading-loose">
-                <section className="md:pr-10 order-2 md:order-1 p-10 text-center md:text-left">
+                <section className="md:pr-10 order-2 md:order-1 p-10 text-left">
                     <h1 className=" text-4xl md:text-6xl font-bold mb-6 flex-grow md:w-5/6 dark:text-white">
                         Hi, I'm <span className="text-[#08D9D6]">Edward</span>,
                         aspiring to be a Web Developer.

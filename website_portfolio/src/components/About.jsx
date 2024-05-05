@@ -69,7 +69,7 @@ const About = ({ darkMode, toggleDarkMode }) => {
         {
             id: 8,
             src: Codeigniter,
-            name: "Codeigniter",
+            name: "CodeIgniter",
             shadow: "shadow-orange-500",
             alt: "Codeigniter profile",
         },
@@ -107,11 +107,11 @@ const About = ({ darkMode, toggleDarkMode }) => {
             name="about"
             className={`${
                 darkMode && "dark"
-            } min-h-screen dark:bg-[#101010] pt-20 md:pt-10`}
+            } min-h-screen dark:bg-[#101010] pt-20 md:pt-10 bg-white`}
         >
             <article className="flex flex-col lg:flex-row px-4 py-16 gap-2 lg:gap-10 justify-between items-center min-h-screen max-w-screen-lg mx-auto">
                 <section className="lg:max-w-[50%] px-5">
-                    <h2 className=" text-3xl font-semibold mb-6 w-5/6 dark:text-white underline underline-offset-8">
+                    <h2 className=" text-3xl font-semibold mb-12 w-5/6 dark:text-white underline underline-offset-8">
                         About me
                     </h2>
                     <p className="my-8 text-xl text-justify dark:text-white leading-loose">
@@ -144,7 +144,9 @@ const About = ({ darkMode, toggleDarkMode }) => {
                                         className={`size-10`}
                                         alt={alt}
                                     />
-                                    <p className="text-xs">{name}</p>
+                                    <p className="text-xs text-gray-400">
+                                        {name}
+                                    </p>
                                 </div>
                             );
                         })}

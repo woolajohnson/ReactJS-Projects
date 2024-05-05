@@ -24,8 +24,8 @@ const NavBar = () => {
         },
     ];
     return (
-        <header className="flex justify-end items-center max-w-screen-lg mx-auto h-24">
-            <nav>
+        <header className="w-full h-24">
+            <nav className="max-w-screen-lg mx-auto flex h-full justify-end items-center">
                 <ul className="hidden md:flex">
                     {links.map(({ id, link }) => (
                         <li
